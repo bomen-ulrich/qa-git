@@ -1,0 +1,9 @@
+Welcome !!
+This document is an essential Git Commands for QA Engineers.
+It focus on managing test automation code, switching between branches, and syncing with developers.
+Most common daily tasks include:
+	>> cloning and existing repositories
+	>> Creating feature branches
+	>> Committing automated test updates
+	>> and pushing changes to trigger CI/CD pipelines
+
