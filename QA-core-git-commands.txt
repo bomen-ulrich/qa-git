@@ -7,3 +7,51 @@ Most common daily tasks include:
 	>> Committing automated test updates
 	>> and pushing changes to trigger CI/CD pipelines
 
+1- CORE GIT COMMANDS FOR A QA ENGINEER
+a) Initilize and Setup
+	> git clone #repo-url
+	This command will download the projet repository to your local laptop
+	You will have a copy of all the projets files on your computer
+	Now you can start working
+
+b) Branching : for isolated testing
+	We never work or do test directly on the main branch at first
+	> git branch -a
+	This will list all the remote branches and all the local branches
+	
+	> git status
+	This will specify the current active branch
+	
+	> git checkout -b bomen-test
+	This will do two things. first it will create a new branch called "bomen-test" then second it wil move us from the previous active branch to "bomen-test"
+	"bomen-test" branch is now the current active branch
+
+	When we end up having many branches that we use to test differents features
+	> git switch ulrich-test
+	This will allow us to move from "bomen-test" branch to "ulrich-test" branch
+
+c) Daily workflow : syncing and saving
+	Our daily work will almost involve the following commands:
+	> git pull origin ace-test
+	This will download the latest code changes done by developers so that we don't work to test old code
+
+	> git status
+	This will check which files have been modified
+	
+	>> git add . or git add toto.txt
+	This will stage all modified files in the current directory or only the "toto.txt" file
+
+	> git commit -m "here I write what has been done"
+	This will commit the changes with a descriptive message
+
+	>git push origin bomen-test
+	This will push our test scripts to the remote repository
+
+d) Cleaning & Merging
+	After done working on a feature branch and everything is good, we can bring back our work on the "main" branch and delete that feature-testing branch
+	> git merge bomen-test
+	This will merge test changes from bomen-test back into the main
+
+	> git branch -d bomen-test
+	This will delete the branch bomen-test after the PR (Pull Request) is merged
+
