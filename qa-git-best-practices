@@ -1,0 +1,16 @@
+Here are some best practices to follow while working with Git.
+
+1- Handle Merge Conflicts
+	Use "git status" to identify the conflict
+	Then manually resolve them in the IDE when merging test results or framework update
+
+2- The use of ".gitignore"
+	To ensure large that  test report folders, ".env" files which contains credentials, and "node_modules" are not pushed to the repository
+
+3- Commit Often
+	Always submit small, focused commits for better traceability
+
+4- Link Tickets
+	Alway specify the reference Jira or the issue ID in the commit messages
+	e.g.: git commit -m "Fix login test - JIRA-405"
+
